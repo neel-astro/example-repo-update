@@ -22,6 +22,7 @@ This command will spin up 3 Docker containers on your machine, each for a differ
 
 - Postgres: Airflow's Metadata Database
 - Webserver: The Airflow component responsible for rendering the Airflow UI
+
 - Scheduler: The Airflow component responsible for monitoring and triggering tasks
 
 2. Verify that all 3 Docker containers were created by running 'docker ps'.
