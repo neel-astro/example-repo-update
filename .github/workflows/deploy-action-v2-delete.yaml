@@ -3,8 +3,8 @@ name: Astronomer CI - Delete Deployment Preview
 on:
   delete:
     branches:
-    - '**'
-    - '!main'
+      - "**"
+      - "!main"
 
 env:
   ## Sets Deployment API key credentials as environment variables
@@ -14,8 +14,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Delete Deployment Preivew
-      uses: astronomer/deploy-action@v0.6
-      with:
-        action: delete-deployment-preview
-        deployment-name: prod
+      - name: Delete Deployment Preivew
+        uses: astronomer/deploy-action@dbt-deploy
+        with:
+          action: delete-deployment-preview
+          deployment-name: neel-test

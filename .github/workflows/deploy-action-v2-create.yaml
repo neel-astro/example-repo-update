@@ -3,8 +3,8 @@ name: Astronomer CI - Create deployment preview
 on:
   create:
     branches:
-    - '**'
-    - '!main' 
+      - "**"
+      - "!main"
 
 env:
   ## Sets Deployment API key credentials as environment variables
@@ -14,8 +14,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Create Deployment Preview
-      uses: astronomer/deploy-action@feature/wake-up-
-      with:
-        action: create-deployment-preview
-        deployment-name: prod
+      - name: Create Deployment Preview
+        uses: astronomer/deploy-action@dbt-deploy
+        with:
+          action: create-deployment-preview
+          deployment-name: neel-test
