@@ -15,3 +15,4 @@ jobs:
         uses: astronomer/deploy-action@dbt-deploy
         with:
           deployment-name: neel-test
+          workspace: ${{ secrets.WORKSPACE_ID }}
