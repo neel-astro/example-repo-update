@@ -16,3 +16,9 @@ jobs:
         with:
           deployment-name: neel-test
           workspace: ${{ secrets.WORKSPACE_ID }}
+      - name: DBT Deploy
+        uses: astronomer/deploy-action@dbt-deploy
+        with:
+          action: dbt-deploy
+          deployment-name: neel-test
+          workspace: ${{ secrets.WORKSPACE_ID }}
