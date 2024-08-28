@@ -11,14 +11,14 @@ jobs:
     steps:
       - name: Print GITHUB_ACTIONS env var
         run: echo "GITHUB_ACTIONS=${GITHUB_ACTIONS}"
-      - name: Deploy to Astronomer
-        uses: astronomer/deploy-action@dbt-deploy
-        with:
-          deployment-name: neel-test-1
-          workspace: ${{ secrets.WORKSPACE_ID }}
       - name: DBT Deploy
         uses: astronomer/deploy-action@dbt-deploy
         with:
           action: dbt-deploy
+          deployment-name: neel-test-1
+          workspace: ${{ secrets.WORKSPACE_ID }}
+      - name: Deploy to Astronomer
+        uses: astronomer/deploy-action@dbt-deploy
+        with:
           deployment-name: neel-test-1
           workspace: ${{ secrets.WORKSPACE_ID }}
