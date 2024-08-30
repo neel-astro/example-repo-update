@@ -20,7 +20,7 @@ jobs:
           mount-path: /dbt
           workspace: ${{ secrets.WORKSPACE_ID }}
           cli-version: 1.28.1
-      - name: Deploy to Astronomer
+      - name: Deploy DAGs/Image
         uses: astronomer/deploy-action@dbt-deploy
         with:
           root-folder: astro-project/
