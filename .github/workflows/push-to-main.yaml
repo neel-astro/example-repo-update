@@ -19,7 +19,7 @@ jobs:
           root-folder: dbt/
           mount-path: /dbt
           workspace: ${{ secrets.WORKSPACE_ID }}
-          cli-version: 1.28.1
+          cli-version: 1.27.0
       - name: Deploy to Astronomer
         uses: astronomer/deploy-action@dbt-deploy
         with:
