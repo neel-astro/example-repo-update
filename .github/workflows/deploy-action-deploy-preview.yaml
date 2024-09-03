@@ -24,3 +24,4 @@ jobs:
           deployment-name: neel-test-1
           root-folder: dbt/
           mount-path: /dbt
+          workspace: ${{ secrets.WORKSPACE_ID }}
