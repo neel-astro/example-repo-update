@@ -26,7 +26,8 @@ def basic_python():
     #### Extract task
     
     A simple "extract" task to get data ready for the rest of the
-    pipeline. In this case, getting data is simulated by reading from a
+    pipeline. In this case, getting
+    data is simulated by reading from a
     hardcoded JSON string.
     """
     data_string = '{"1001": 301.27, "1002": 433.21, "1003": 502.22}'
