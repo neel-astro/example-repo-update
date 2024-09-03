@@ -1,10 +1,11 @@
-name: Astronomer CI - Deploy code to Preview
+name: Deploy code to Preview
 
 on:
   push:
     branches:
       - "**"
       - "!main"
+  workflow_dispatch:
 
 env:
   ## Sets Deployment API key credentials as environment variables
