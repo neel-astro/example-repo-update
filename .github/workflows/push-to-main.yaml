@@ -12,15 +12,15 @@ jobs:
     steps:
       - name: Print GITHUB_ACTIONS env var
         run: echo "GITHUB_ACTIONS=${GITHUB_ACTIONS}"
-      - name: DBT Deploy
-        uses: astronomer/deploy-action@checkout-submodule
-        with:
-          action: dbt-deploy
-          deployment-name: neel-test-1
-          root-folder: dbt/
-          mount-path: /dbt
-          workspace: ${{ secrets.WORKSPACE_ID }}
-          checkout-submodules: true
+      # - name: DBT Deploy
+      #   uses: astronomer/deploy-action@checkout-submodule
+      #   with:
+      #     action: dbt-deploy
+      #     deployment-name: neel-test-1
+      #     root-folder: dbt/
+      #     mount-path: /dbt
+      #     workspace: ${{ secrets.WORKSPACE_ID }}
+      #     checkout-submodules: true
       - name: Deploy DAGs/Image
         uses: astronomer/deploy-action@checkout-submodule
         with:
