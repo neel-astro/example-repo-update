@@ -21,3 +21,6 @@ jobs:
           action: create-deployment-preview
           deployment-name: neel-test-1
           root-folder: astro-project/
+          copy-connections: false
+          copy-airflow-variables: false
+          copy-pools: false
