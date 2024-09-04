@@ -24,7 +24,6 @@ def run_sql_2():
 def basic_python():
     """
     #### Extract task
-    
     A simple "extract" task to get data ready for the rest of the
     pipeline. In this case, getting
     data is simulated by reading from a
