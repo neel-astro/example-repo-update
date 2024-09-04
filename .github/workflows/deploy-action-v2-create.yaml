@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Create Deployment Preview
-        uses: astronomer/deploy-action@dbt-deploy
+        uses: astronomer/deploy-action@fix/depl-hibernation
         with:
           action: create-deployment-preview
           deployment-name: neel-test-1

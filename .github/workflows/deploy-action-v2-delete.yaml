@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Delete Deployment Preivew
-        uses: astronomer/deploy-action@dbt-deploy
+        uses: astronomer/deploy-action@fix/depl-hibernation
         with:
           action: delete-deployment-preview
           deployment-name: neel-test-1
