@@ -13,7 +13,7 @@ jobs:
       - name: Print GITHUB_ACTIONS env var
         run: echo "GITHUB_ACTIONS=${GITHUB_ACTIONS}"
       - name: DBT Deploy
-        uses: astronomer/deploy-action@dbt-deploy
+        uses: astronomer/deploy-action@checkout-submodule
         with:
           action: dbt-deploy
           deployment-name: neel-test-1
@@ -21,9 +21,11 @@ jobs:
           mount-path: /dbt
           workspace: ${{ secrets.WORKSPACE_ID }}
           cli-version: 1.28.1
+          checkout-submodules: true
       - name: Deploy DAGs/Image
-        uses: astronomer/deploy-action@dbt-deploy
+        uses: astronomer/deploy-action@checkout-submodule
         with:
           root-folder: astro-project/
           deployment-name: neel-test-1
           workspace: ${{ secrets.WORKSPACE_ID }}
+          checkout-submodules: recursive
