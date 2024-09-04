@@ -20,3 +20,4 @@ jobs:
         with:
           action: create-deployment-preview
           deployment-name: neel-test-1
+          root-folder: astro-project/
