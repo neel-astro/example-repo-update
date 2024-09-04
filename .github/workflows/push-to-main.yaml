@@ -27,4 +27,3 @@ jobs:
           root-folder: astro-project/
           deployment-name: neel-test-1
           workspace: ${{ secrets.WORKSPACE_ID }}
-          checkout-submodules: true
