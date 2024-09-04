@@ -28,6 +28,7 @@ def basic_python():
     pipeline. In this case, getting
     data is simulated by reading from a
     hardcoded JSON string.
+    
     """
     data_string = '{"1001": 301.27, "1002": 433.21, "1003": 502.22}'
 
