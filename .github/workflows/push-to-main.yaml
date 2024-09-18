@@ -22,9 +22,8 @@ jobs:
       #     workspace: ${{ secrets.WORKSPACE_ID }}
       #     checkout-submodules: true
       - name: Deploy DAGs/Image
-        uses: astronomer/deploy-action@checkout-submodule
+        uses: astronomer/deploy-action@dbt-deploy
         with:
-          root-folder: astro-project/
           deployment-name: neel-test-1
           workspace: ${{ secrets.WORKSPACE_ID }}
           checkout: false
