@@ -22,7 +22,7 @@ jobs:
       #     workspace: ${{ secrets.WORKSPACE_ID }}
       #     checkout-submodules: true
       - name: Deploy DAGs/Image
-        uses: astronomer/deploy-action
+        uses: astronomer/deploy-action@latest
         with:
           deployment-name: neel-test-1
           workspace: ${{ secrets.WORKSPACE_ID }}
