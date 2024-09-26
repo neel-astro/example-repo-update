@@ -2,7 +2,7 @@ name: Deploy (checkdeployaction)
 on:
   push:
     branches:
-      - main
+      - issue-1
 
 jobs:
   prod-astronomer:
@@ -33,7 +33,7 @@ jobs:
       #     workspace: ${{ secrets.WORKSPACE_ID }}
       #     checkout-submodules: true
       - name: Deploy DAGs/Image
-        uses: astronomer/deploy-action@fix/root-folder-reference
+        uses: astronomer/deploy-action@v0.7
         with:
           deployment-name: neel-test-1
           workspace: ${{ secrets.WORKSPACE_ID }}
