@@ -1,7 +1,6 @@
 """
 ## Astronaut ETL example DAG
 
-
 This DAG queries the list of astronauts currently in space from the
 Open Notify API and prints each astronaut's name and flying craft.
 
