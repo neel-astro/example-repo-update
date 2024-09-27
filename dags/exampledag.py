@@ -26,7 +26,6 @@ from pendulum import datetime
 import requests
 
 
-
 # Define the basic parameters of the DAG, like schedule and start_date
 @dag(
     start_date=datetime(2024, 1, 1),
