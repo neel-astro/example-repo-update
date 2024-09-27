@@ -33,7 +33,7 @@ jobs:
       #     workspace: ${{ secrets.WORKSPACE_ID }}
       #     checkout-submodules: true
       - name: Deploy DAGs/Image
-        uses: astronomer/deploy-action@a18f7ada4b9ca9ed0c9b80f83058a69ec4fcc9d3
+        uses: astronomer/deploy-action@fix/root-folder-reference
         with:
           deployment-name: neel-test-1
           workspace: ${{ secrets.WORKSPACE_ID }}
