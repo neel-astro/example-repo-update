@@ -36,4 +36,5 @@ jobs:
         uses: astronomer/deploy-action@fix/root-folder-reference
         with:
           deployment-name: neel-test-1
+          deploy-type: dags-only
           workspace: ${{ secrets.WORKSPACE_ID }}
