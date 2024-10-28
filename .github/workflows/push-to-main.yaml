@@ -29,7 +29,8 @@ jobs:
       - name: DBT Deploy
         uses: astronomer/deploy-action@fix/tag-event-case
         with:
-          action: dbt-deploy
+          action: deploy
+          deploy-type: dbt
           deployment-name: neel-test-1
           root-folder: dbt/
           mount-path: /dbt
