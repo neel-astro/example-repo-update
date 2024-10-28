@@ -1,8 +1,8 @@
 name: Deploy (checkdeployaction)
 on:
   push:
-    branches:
-      - main
+    # branches:
+    #   - main
     tags:        
       - '*'
   workflow_dispatch:
