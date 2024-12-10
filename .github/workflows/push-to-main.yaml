@@ -37,7 +37,7 @@ jobs:
       #     workspace: ${{ secrets.WORKSPACE_ID }}
       #     checkout-submodules: true
       - name: Deploy DAGs/Image
-        uses: astronomer/deploy-action@fix/tag-event-case
+        uses: astronomer/deploy-action@fix/94
         with:
           deployment-name: neel-test-1
           deploy-type: image-and-dags
