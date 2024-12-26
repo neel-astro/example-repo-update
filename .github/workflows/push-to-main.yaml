@@ -26,7 +26,7 @@ jobs:
           curl -sSL https://install.astronomer.io | sudo bash -s
 
       - name: Set CLI context
-        run: astro context switch astronomer.io
+        run: astro context switch astronomer-dev.io
 
       - name: Print GITHUB_ACTIONS env var
         run: echo "GITHUB_ACTIONS=${GITHUB_ACTIONS}"
@@ -41,9 +41,44 @@ jobs:
       #     workspace: ${{ secrets.WORKSPACE_ID }}
       #     checkout-submodules: true
       - name: Deploy DAGs/Image
-        uses: astronomer/deploy-action@v0.8.0
+        uses: astronomer/deploy-action@v0.9.0
         with:
-          deployment-name: neel-test-1
+          deployment-name: neel-test-1_DND
+          deploy-type: image-and-dags
+          deploy-image: true
+          workspace: ${{ secrets.WORKSPACE_ID }}
+      - name: Deploy DAGs/Image
+        uses: astronomer/deploy-action@v0.9.0
+        with:
+          deployment-name: neel-test-2_DND
+          deploy-type: image-and-dags
+          deploy-image: true
+          workspace: ${{ secrets.WORKSPACE_ID }}
+      - name: Deploy DAGs/Image
+        uses: astronomer/deploy-action@v0.9.0
+        with:
+          deployment-name: neel-test-3_DND
+          deploy-type: image-and-dags
+          deploy-image: true
+          workspace: ${{ secrets.WORKSPACE_ID }}
+      - name: Deploy DAGs/Image
+        uses: astronomer/deploy-action@v0.9.0
+        with:
+          deployment-name: neel-test-4_DND
+          deploy-type: image-and-dags
+          deploy-image: true
+          workspace: ${{ secrets.WORKSPACE_ID }}
+      - name: Deploy DAGs/Image
+        uses: astronomer/deploy-action@v0.9.0
+        with:
+          deployment-name: neel-test-5_DND
+          deploy-type: image-and-dags
+          deploy-image: true
+          workspace: ${{ secrets.WORKSPACE_ID }}
+      - name: Deploy DAGs/Image
+        uses: astronomer/deploy-action@v0.9.0
+        with:
+          deployment-name: neel-test-6_DND
           deploy-type: image-and-dags
           deploy-image: true
           workspace: ${{ secrets.WORKSPACE_ID }}
