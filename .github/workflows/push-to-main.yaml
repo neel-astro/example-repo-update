@@ -2,12 +2,7 @@ name: Deploy (checkdeployaction)
 on:
   push:
     branches: [dev, main]
-    # tags:        
-    #   - '*'
-  # pull_request:
-  #   types:
-  #     - closed
-  #   branches: [main]
+  pull_request:
   workflow_dispatch:
 
 jobs:
@@ -41,7 +36,7 @@ jobs:
       #     workspace: ${{ secrets.WORKSPACE_ID }}
       #     checkout-submodules: true
       - name: Deploy DAGs/Image
-        uses: astronomer/deploy-action@v0.9.0
+        uses: astronomer/deploy-action@fix/rebase-force-push
         with:
           deployment-name: neel-test
           deploy-type: infer
