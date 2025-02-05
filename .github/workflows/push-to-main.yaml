@@ -1,7 +1,6 @@
 name: Deploy (checkdeployaction)
 on:
   push:
-    branches: [dev, main]
   pull_request:
   workflow_dispatch:
 
@@ -24,16 +23,7 @@ jobs:
 
       - name: Print GITHUB_ACTIONS env var
         run: echo "GITHUB_ACTIONS=${GITHUB_ACTIONS}"
-      # - name: DBT Deploy
-      #   uses: astronomer/deploy-action@fix/tag-event-case
-      #   with:
-      #     action: deploy
-      #     deploy-type: dbt
-      #     deployment-name: neel-test-1
-      #     root-folder: dbt/
-      #     mount-path: /dbt
-      #     workspace: ${{ secrets.WORKSPACE_ID }}
-      #     checkout-submodules: true
+
       - name: Deploy DAGs/Image
         uses: astronomer/deploy-action@fix/rebase-force-push
         with:
