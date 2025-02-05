@@ -7,7 +7,6 @@ on:
 
 jobs:
   job-1:
-    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev'
     env:
       ASTRO_API_TOKEN: ${{ secrets.ASTRO_API_TOKEN }}
     runs-on: ubuntu-latest
