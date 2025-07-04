@@ -54,6 +54,7 @@ def example_astronauts():
             list_of_people_in_space = r.json()["people"]
         except:
             print("API currently not available, using hardcoded data instead.")
+            print("123")
             number_of_people_in_space = 12
             list_of_people_in_space = [
                 {"craft": "ISS", "name": "Oleg Kononenko"},
