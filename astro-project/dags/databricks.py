@@ -7,7 +7,6 @@ Shows how to create a new cluster for the SubmitRun operator, as well as how to 
 """
 
 
-
 from airflow import DAG
 from airflow.providers.databricks.operators.databricks import (
     DatabricksSubmitRunOperator,
