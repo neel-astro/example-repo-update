@@ -14,6 +14,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Install dependencies
+        run: |
+          sudo apt-get install jq
+          curl -sSL https://install.astronomer.io | sudo bash -s
       - name: Set CLI context
         run: astro context switch astronomer-dev.io
       - name: Create Deployment Preview
