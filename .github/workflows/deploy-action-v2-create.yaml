@@ -17,7 +17,7 @@ jobs:
       - name: Set CLI context
         run: astro context switch astronomer-dev.io
       - name: Create Deployment Preview
-        uses: astronomer/deploy-action@0.10.0
+        uses: astronomer/deploy-action@v0.10.0
         with:
           action: create-deployment-preview
           deployment-name: test-master-af3-depl
